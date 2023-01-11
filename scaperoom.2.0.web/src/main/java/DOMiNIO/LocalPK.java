@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DOMINIO;
+package DOMiNIO;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -76,7 +76,7 @@ public class LocalPK implements Serializable {
 
     @Override
     public String toString() {
-        return "DOMINIO.LocalPK[ idLOCAL=" + idLOCAL + ", dIRECCIONidDIRECCION=" + dIRECCIONidDIRECCION + " ]";
+        return "DOMiNIO.LocalPK[ idLOCAL=" + idLOCAL + ", dIRECCIONidDIRECCION=" + dIRECCIONidDIRECCION + " ]";
     }
     
 }

@@ -5,7 +5,8 @@
  */
 package DATA;
 
-import DOMINIO.Local;
+
+import DOMiNIO.Local;
 import java.util.List;
 
 /**

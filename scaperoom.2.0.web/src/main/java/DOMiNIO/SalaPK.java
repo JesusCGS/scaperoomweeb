@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DOMINIO;
+package DOMiNIO;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -16,30 +16,30 @@ import javax.validation.constraints.NotNull;
  * @author Alumno Mañana
  */
 @Embeddable
-public class TrabajadoresPK implements Serializable {
+public class SalaPK implements Serializable {
 
     @Basic(optional = false)
-    @Column(name = "idTRABAJADORES")
-    private int idTRABAJADORES;
+    @Column(name = "idsala")
+    private int idsala;
     @Basic(optional = false)
     @NotNull
     @Column(name = "LOCAL_idLOCAL")
     private int lOCALidLOCAL;
 
-    public TrabajadoresPK() {
+    public SalaPK() {
     }
 
-    public TrabajadoresPK(int idTRABAJADORES, int lOCALidLOCAL) {
-        this.idTRABAJADORES = idTRABAJADORES;
+    public SalaPK(int idsala, int lOCALidLOCAL) {
+        this.idsala = idsala;
         this.lOCALidLOCAL = lOCALidLOCAL;
     }
 
-    public int getIdTRABAJADORES() {
-        return idTRABAJADORES;
+    public int getIdsala() {
+        return idsala;
     }
 
-    public void setIdTRABAJADORES(int idTRABAJADORES) {
-        this.idTRABAJADORES = idTRABAJADORES;
+    public void setIdsala(int idsala) {
+        this.idsala = idsala;
     }
 
     public int getLOCALidLOCAL() {
@@ -53,7 +53,7 @@ public class TrabajadoresPK implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (int) idTRABAJADORES;
+        hash += (int) idsala;
         hash += (int) lOCALidLOCAL;
         return hash;
     }
@@ -61,11 +61,11 @@ public class TrabajadoresPK implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof TrabajadoresPK)) {
+        if (!(object instanceof SalaPK)) {
             return false;
         }
-        TrabajadoresPK other = (TrabajadoresPK) object;
-        if (this.idTRABAJADORES != other.idTRABAJADORES) {
+        SalaPK other = (SalaPK) object;
+        if (this.idsala != other.idsala) {
             return false;
         }
         if (this.lOCALidLOCAL != other.lOCALidLOCAL) {
@@ -76,7 +76,7 @@ public class TrabajadoresPK implements Serializable {
 
     @Override
     public String toString() {
-        return "DOMINIO.TrabajadoresPK[ idTRABAJADORES=" + idTRABAJADORES + ", lOCALidLOCAL=" + lOCALidLOCAL + " ]";
+        return "DOMiNIO.SalaPK[ idsala=" + idsala + ", lOCALidLOCAL=" + lOCALidLOCAL + " ]";
     }
     
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DOMINIO;
+package DOMiNIO;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -135,7 +135,7 @@ public class Reserva implements Serializable {
 
     @Override
     public String toString() {
-        return "DOMINIO.Reserva[ reservaPK=" + reservaPK + " ]";
+        return "DOMiNIO.Reserva[ reservaPK=" + reservaPK + " ]";
     }
     
 }

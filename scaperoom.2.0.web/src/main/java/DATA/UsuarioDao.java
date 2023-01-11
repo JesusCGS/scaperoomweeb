@@ -1,7 +1,8 @@
 package DATA;
 
 
-import DOMINIO.Usuario;
+
+import DOMiNIO.Usuario;
 import java.util.List;
 
 /*

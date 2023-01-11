@@ -5,7 +5,8 @@
  */
 package DATA;
 
-import DOMINIO.Direccion;
+
+import DOMiNIO.Direccion;
 import java.util.List;
 
 /**

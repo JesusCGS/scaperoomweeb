@@ -5,7 +5,8 @@
  */
 package DATA;
 
-import DOMINIO.Juegos;
+
+import DOMiNIO.Juegos;
 import java.util.List;
 
 /**

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DOMINIO;
+package DOMiNIO;
 
 import java.io.Serializable;
 import java.util.List;
@@ -142,7 +142,7 @@ public class Local implements Serializable {
 
     @Override
     public String toString() {
-        return "DOMINIO.Local[ localPK=" + localPK + " ]";
+        return "DOMiNIO.Local[ localPK=" + localPK + " ]";
     }
     
 }

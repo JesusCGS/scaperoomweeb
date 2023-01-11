@@ -5,7 +5,8 @@
  */
 package DATA;
 
-import DOMINIO.Trabajadores;
+
+import DOMiNIO.Trabajadores;
 import java.util.List;
 
 /**

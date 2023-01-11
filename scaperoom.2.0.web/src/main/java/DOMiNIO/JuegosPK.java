@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DOMINIO;
+package DOMiNIO;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -93,7 +93,7 @@ public class JuegosPK implements Serializable {
 
     @Override
     public String toString() {
-        return "DOMINIO.JuegosPK[ idJuego=" + idJuego + ", tRABAJADORESidTRABAJADORES=" + tRABAJADORESidTRABAJADORES + ", salaIdsala=" + salaIdsala + " ]";
+        return "DOMiNIO.JuegosPK[ idJuego=" + idJuego + ", tRABAJADORESidTRABAJADORES=" + tRABAJADORESidTRABAJADORES + ", salaIdsala=" + salaIdsala + " ]";
     }
     
 }

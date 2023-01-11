@@ -5,7 +5,8 @@
  */
 package DATA;
 
-import DOMINIO.Reserva;
+
+import DOMiNIO.Reserva;
 import java.util.List;
 
 /**
