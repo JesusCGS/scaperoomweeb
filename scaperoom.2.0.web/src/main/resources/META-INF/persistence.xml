@@ -5,9 +5,9 @@
     <class>DOMiNIO.Direccion</class>
     <class>DOMiNIO.Sala</class>
     <class>DOMiNIO.Trabajadores</class>
-    <class>DOMiNIO.Local</class>
     <class>DOMiNIO.Reserva</class>
     <class>DOMiNIO.Juegos</class>
     <class>DOMiNIO.Usuario</class>
+    <class>DOMiNIO.Locall</class>
   </persistence-unit>
 </persistence>

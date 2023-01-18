@@ -3,23 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DATA;
-
+package servicio;
 
 import DOMiNIO.Locall;
 import java.util.List;
+import javax.ejb.Local;
+
 
 /**
  *
  * @author Alumno Mañana
  */
-public interface LocalDao {
+@Local
+
+public interface LocalServicio {
+    public List<Locall> listarAllLocal();
     
-    public List<Locall> findAllLocal();
+    public Locall buscarLocalByID(Locall local);
     
-    public Locall findLocalByID(Locall local);
-    
-    public Locall findLocalByNombre(Locall local);
+    public Locall buscarLocalByNombre(Locall local);
     
    // public Local findLocalByTelfono(Local local);
     

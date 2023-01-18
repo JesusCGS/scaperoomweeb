@@ -51,7 +51,7 @@ public class Direccion implements Serializable {
     @Column(name = "ciudad")
     private String ciudad;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "direccion")
-    private List<Local> localList;
+    private List<Locall> localList;
 
     public Direccion() {
     }
@@ -90,11 +90,11 @@ public class Direccion implements Serializable {
         this.ciudad = ciudad;
     }
 
-    public List<Local> getLocalList() {
+    public List<Locall> getLocalList() {
         return localList;
     }
 
-    public void setLocalList(List<Local> localList) {
+    public void setLocalList(List<Locall> localList) {
         this.localList = localList;
     }
 

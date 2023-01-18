@@ -64,7 +64,7 @@ public class Trabajadores implements Serializable {
     private List<Juegos> juegosList;
     @JoinColumn(name = "LOCAL_idLOCAL", referencedColumnName = "idLOCAL", insertable = false, updatable = false)
     @ManyToOne(optional = false)
-    private Local local;
+    private Locall local;
 
     public Trabajadores() {
     }
@@ -133,11 +133,11 @@ public class Trabajadores implements Serializable {
         this.juegosList = juegosList;
     }
 
-    public Local getLocal() {
+    public Locall getLocal() {
         return local;
     }
 
-    public void setLocal(Local local) {
+    public void setLocal(Locall local) {
         this.local = local;
     }
 

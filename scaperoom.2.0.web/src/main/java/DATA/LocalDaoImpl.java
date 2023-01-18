@@ -5,7 +5,7 @@
  */
 package DATA;
 
-import DOMiNIO.Local;
+import DOMiNIO.Locall;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -20,32 +20,32 @@ public class LocalDaoImpl implements LocalDao {
     EntityManager em;
 
     @Override
-    public List<Local> findAllLocal() {
+    public List<Locall> findAllLocal() {
      return em.createNamedQuery("Local.findAll").getResultList();
     }
 
     @Override
-    public Local findLocalByID(Local local) {
-        return em.find(Local.class,local.getLocalPK().getIdLOCAL());
+    public Locall findLocalByID(Locall local) {
+        return em.find(Locall.class,local.getLocalPK().getIdLOCAL());
     }
 
     @Override
-    public Local findLocalByNombre(Local local) {
-       return em.find(Local.class,local.getNombre());
+    public Locall findLocalByNombre(Locall local) {
+       return em.find(Locall.class,local.getNombre());
     }
 
     @Override
-    public void insertLocal(Local local) {
+    public void insertLocal(Locall local) {
        em.persist(local);
     }
 
     @Override
-    public void updateLocal(Local local) {
+    public void updateLocal(Locall local) {
       em.merge(local);
     }
 
     @Override
-    public void deleteLocal(Local local) {
+    public void deleteLocal(Locall local) {
        em.remove(em.merge(local));    
     }
 

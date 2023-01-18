@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -33,7 +33,7 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Local.findByNombre", query = "SELECT l FROM Local l WHERE l.nombre = :nombre"),
     @NamedQuery(name = "Local.findByTlf", query = "SELECT l FROM Local l WHERE l.tlf = :tlf"),
     @NamedQuery(name = "Local.findByDIRECCIONidDIRECCION", query = "SELECT l FROM Local l WHERE l.localPK.dIRECCIONidDIRECCION = :dIRECCIONidDIRECCION")})
-public class Local implements Serializable {
+public class Locall implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @EmbeddedId
@@ -55,20 +55,20 @@ public class Local implements Serializable {
     @ManyToOne(optional = false)
     private Direccion direccion;
 
-    public Local() {
+    public Locall() {
     }
 
-    public Local(LocalPK localPK) {
+    public Locall(LocalPK localPK) {
         this.localPK = localPK;
     }
 
-    public Local(LocalPK localPK, String nombre, int tlf) {
+    public Locall(LocalPK localPK, String nombre, int tlf) {
         this.localPK = localPK;
         this.nombre = nombre;
         this.tlf = tlf;
     }
 
-    public Local(int idLOCAL, int dIRECCIONidDIRECCION) {
+    public Locall(int idLOCAL, int dIRECCIONidDIRECCION) {
         this.localPK = new LocalPK(idLOCAL, dIRECCIONidDIRECCION);
     }
 
@@ -130,10 +130,10 @@ public class Local implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Local)) {
+        if (!(object instanceof Locall)) {
             return false;
         }
-        Local other = (Local) object;
+        Locall other = (Locall) object;
         if ((this.localPK == null && other.localPK != null) || (this.localPK != null && !this.localPK.equals(other.localPK))) {
             return false;
         }
