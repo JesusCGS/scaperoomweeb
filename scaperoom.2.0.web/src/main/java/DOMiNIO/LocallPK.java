@@ -16,30 +16,30 @@ import javax.validation.constraints.NotNull;
  * @author Alumno Mañana
  */
 @Embeddable
-public class LocalPK implements Serializable {
+public class LocallPK implements Serializable {
 
     @Basic(optional = false)
-    @Column(name = "idLOCAL")
-    private int idLOCAL;
+    @Column(name = "idLOCALL")
+    private int idLOCALL;
     @Basic(optional = false)
     @NotNull
     @Column(name = "DIRECCION_idDIRECCION")
     private int dIRECCIONidDIRECCION;
 
-    public LocalPK() {
+    public LocallPK() {
     }
 
-    public LocalPK(int idLOCAL, int dIRECCIONidDIRECCION) {
-        this.idLOCAL = idLOCAL;
+    public LocallPK(int idLOCALL, int dIRECCIONidDIRECCION) {
+        this.idLOCALL = idLOCALL;
         this.dIRECCIONidDIRECCION = dIRECCIONidDIRECCION;
     }
 
-    public int getIdLOCAL() {
-        return idLOCAL;
+    public int getIdLOCALL() {
+        return idLOCALL;
     }
 
-    public void setIdLOCAL(int idLOCAL) {
-        this.idLOCAL = idLOCAL;
+    public void setIdLOCALL(int idLOCALL) {
+        this.idLOCALL = idLOCALL;
     }
 
     public int getDIRECCIONidDIRECCION() {
@@ -53,7 +53,7 @@ public class LocalPK implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (int) idLOCAL;
+        hash += (int) idLOCALL;
         hash += (int) dIRECCIONidDIRECCION;
         return hash;
     }
@@ -61,11 +61,11 @@ public class LocalPK implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof LocalPK)) {
+        if (!(object instanceof LocallPK)) {
             return false;
         }
-        LocalPK other = (LocalPK) object;
-        if (this.idLOCAL != other.idLOCAL) {
+        LocallPK other = (LocallPK) object;
+        if (this.idLOCALL != other.idLOCALL) {
             return false;
         }
         if (this.dIRECCIONidDIRECCION != other.dIRECCIONidDIRECCION) {
@@ -76,7 +76,7 @@ public class LocalPK implements Serializable {
 
     @Override
     public String toString() {
-        return "DOMiNIO.LocalPK[ idLOCAL=" + idLOCAL + ", dIRECCIONidDIRECCION=" + dIRECCIONidDIRECCION + " ]";
+        return "DOMiNIO.LocallPK[ idLOCALL=" + idLOCALL + ", dIRECCIONidDIRECCION=" + dIRECCIONidDIRECCION + " ]";
     }
     
 }

@@ -30,7 +30,7 @@ import javax.validation.constraints.NotNull;
     @NamedQuery(name = "Sala.findAll", query = "SELECT s FROM Sala s"),
     @NamedQuery(name = "Sala.findByIdsala", query = "SELECT s FROM Sala s WHERE s.salaPK.idsala = :idsala"),
     @NamedQuery(name = "Sala.findByNumSala", query = "SELECT s FROM Sala s WHERE s.numSala = :numSala"),
-    @NamedQuery(name = "Sala.findByLOCALidLOCAL", query = "SELECT s FROM Sala s WHERE s.salaPK.lOCALidLOCAL = :lOCALidLOCAL")})
+    @NamedQuery(name = "Sala.findByLOCALidLOCALL", query = "SELECT s FROM Sala s WHERE s.salaPK.lOCALidLOCALL = :lOCALidLOCALL")})
 public class Sala implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -42,9 +42,9 @@ public class Sala implements Serializable {
     private int numSala;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "sala")
     private List<Juegos> juegosList;
-    @JoinColumn(name = "LOCAL_idLOCAL", referencedColumnName = "idLOCAL", insertable = false, updatable = false)
+    @JoinColumn(name = "LOCAL_idLOCALL", referencedColumnName = "idLOCALL", insertable = false, updatable = false)
     @ManyToOne(optional = false)
-    private Locall local;
+    private Locall locall;
 
     public Sala() {
     }
@@ -58,8 +58,8 @@ public class Sala implements Serializable {
         this.numSala = numSala;
     }
 
-    public Sala(int idsala, int lOCALidLOCAL) {
-        this.salaPK = new SalaPK(idsala, lOCALidLOCAL);
+    public Sala(int idsala, int lOCALidLOCALL) {
+        this.salaPK = new SalaPK(idsala, lOCALidLOCALL);
     }
 
     public SalaPK getSalaPK() {
@@ -86,12 +86,12 @@ public class Sala implements Serializable {
         this.juegosList = juegosList;
     }
 
-    public Locall getLocal() {
-        return local;
+    public Locall getLocall() {
+        return locall;
     }
 
-    public void setLocal(Locall local) {
-        this.local = local;
+    public void setLocall(Locall locall) {
+        this.locall = locall;
     }
 
     @Override

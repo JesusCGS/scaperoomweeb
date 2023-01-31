@@ -1,4 +1,4 @@
- /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -26,18 +26,18 @@ import javax.validation.constraints.Size;
  * @author Alumno Mañana
  */
 @Entity
-@Table(name = "local")
+@Table(name = "locall")
 @NamedQueries({
-    @NamedQuery(name = "Local.findAll", query = "SELECT l FROM Local l"),
-    @NamedQuery(name = "Local.findByIdLOCAL", query = "SELECT l FROM Local l WHERE l.localPK.idLOCAL = :idLOCAL"),
-    @NamedQuery(name = "Local.findByNombre", query = "SELECT l FROM Local l WHERE l.nombre = :nombre"),
-    @NamedQuery(name = "Local.findByTlf", query = "SELECT l FROM Local l WHERE l.tlf = :tlf"),
-    @NamedQuery(name = "Local.findByDIRECCIONidDIRECCION", query = "SELECT l FROM Local l WHERE l.localPK.dIRECCIONidDIRECCION = :dIRECCIONidDIRECCION")})
+    @NamedQuery(name = "Locall.findAll", query = "SELECT l FROM Locall l"),
+    @NamedQuery(name = "Locall.findByIdLOCALL", query = "SELECT l FROM Locall l WHERE l.locallPK.idLOCALL = :idLOCALL"),
+    @NamedQuery(name = "Locall.findByNombre", query = "SELECT l FROM Locall l WHERE l.nombre = :nombre"),
+    @NamedQuery(name = "Locall.findByTlf", query = "SELECT l FROM Locall l WHERE l.tlf = :tlf"),
+    @NamedQuery(name = "Locall.findByDIRECCIONidDIRECCION", query = "SELECT l FROM Locall l WHERE l.locallPK.dIRECCIONidDIRECCION = :dIRECCIONidDIRECCION")})
 public class Locall implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @EmbeddedId
-    protected LocalPK localPK;
+    protected LocallPK locallPK;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 25)
@@ -47,9 +47,9 @@ public class Locall implements Serializable {
     @NotNull
     @Column(name = "tlf")
     private int tlf;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "local")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "locall")
     private List<Trabajadores> trabajadoresList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "local")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "locall")
     private List<Sala> salaList;
     @JoinColumn(name = "DIRECCION_idDIRECCION", referencedColumnName = "idDIRECCION", insertable = false, updatable = false)
     @ManyToOne(optional = false)
@@ -58,26 +58,26 @@ public class Locall implements Serializable {
     public Locall() {
     }
 
-    public Locall(LocalPK localPK) {
-        this.localPK = localPK;
+    public Locall(LocallPK locallPK) {
+        this.locallPK = locallPK;
     }
 
-    public Locall(LocalPK localPK, String nombre, int tlf) {
-        this.localPK = localPK;
+    public Locall(LocallPK locallPK, String nombre, int tlf) {
+        this.locallPK = locallPK;
         this.nombre = nombre;
         this.tlf = tlf;
     }
 
-    public Locall(int idLOCAL, int dIRECCIONidDIRECCION) {
-        this.localPK = new LocalPK(idLOCAL, dIRECCIONidDIRECCION);
+    public Locall(int idLOCALL, int dIRECCIONidDIRECCION) {
+        this.locallPK = new LocallPK(idLOCALL, dIRECCIONidDIRECCION);
     }
 
-    public LocalPK getLocalPK() {
-        return localPK;
+    public LocallPK getLocallPK() {
+        return locallPK;
     }
 
-    public void setLocalPK(LocalPK localPK) {
-        this.localPK = localPK;
+    public void setLocallPK(LocallPK locallPK) {
+        this.locallPK = locallPK;
     }
 
     public String getNombre() {
@@ -123,7 +123,7 @@ public class Locall implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (localPK != null ? localPK.hashCode() : 0);
+        hash += (locallPK != null ? locallPK.hashCode() : 0);
         return hash;
     }
 
@@ -134,7 +134,7 @@ public class Locall implements Serializable {
             return false;
         }
         Locall other = (Locall) object;
-        if ((this.localPK == null && other.localPK != null) || (this.localPK != null && !this.localPK.equals(other.localPK))) {
+        if ((this.locallPK == null && other.locallPK != null) || (this.locallPK != null && !this.locallPK.equals(other.locallPK))) {
             return false;
         }
         return true;
@@ -142,7 +142,7 @@ public class Locall implements Serializable {
 
     @Override
     public String toString() {
-        return "DOMiNIO.Local[ localPK=" + localPK + " ]";
+        return "DOMiNIO.Locall[ locallPK=" + locallPK + " ]";
     }
     
 }

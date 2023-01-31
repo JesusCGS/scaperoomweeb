@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.2" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
-  <!-- Define Persistence Unit -->
-  <persistence-unit name="ScaperoomPU">
+  <persistence-unit name="ScaperoomPU" transaction-type="JTA">
+    <jta-data-source>jdbc/ScaperoomDb</jta-data-source>
     <class>DOMiNIO.Direccion</class>
     <class>DOMiNIO.Sala</class>
     <class>DOMiNIO.Trabajadores</class>
@@ -9,5 +9,6 @@
     <class>DOMiNIO.Juegos</class>
     <class>DOMiNIO.Usuario</class>
     <class>DOMiNIO.Locall</class>
+    <class>DOMiNIO.Local</class>
   </persistence-unit>
 </persistence>

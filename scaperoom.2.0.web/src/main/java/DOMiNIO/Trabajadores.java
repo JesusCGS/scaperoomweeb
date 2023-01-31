@@ -34,7 +34,7 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Trabajadores.findByApellido", query = "SELECT t FROM Trabajadores t WHERE t.apellido = :apellido"),
     @NamedQuery(name = "Trabajadores.findByDni", query = "SELECT t FROM Trabajadores t WHERE t.dni = :dni"),
     @NamedQuery(name = "Trabajadores.findByCorreo", query = "SELECT t FROM Trabajadores t WHERE t.correo = :correo"),
-    @NamedQuery(name = "Trabajadores.findByLOCALidLOCAL", query = "SELECT t FROM Trabajadores t WHERE t.trabajadoresPK.lOCALidLOCAL = :lOCALidLOCAL")})
+    @NamedQuery(name = "Trabajadores.findByLOCALidLOCALL", query = "SELECT t FROM Trabajadores t WHERE t.trabajadoresPK.lOCALidLOCALL = :lOCALidLOCALL")})
 public class Trabajadores implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -62,9 +62,9 @@ public class Trabajadores implements Serializable {
     private String correo;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "trabajadores")
     private List<Juegos> juegosList;
-    @JoinColumn(name = "LOCAL_idLOCAL", referencedColumnName = "idLOCAL", insertable = false, updatable = false)
+    @JoinColumn(name = "LOCAL_idLOCALL", referencedColumnName = "idLOCALL", insertable = false, updatable = false)
     @ManyToOne(optional = false)
-    private Locall local;
+    private Locall locall;
 
     public Trabajadores() {
     }
@@ -81,8 +81,8 @@ public class Trabajadores implements Serializable {
         this.correo = correo;
     }
 
-    public Trabajadores(int idTRABAJADORES, int lOCALidLOCAL) {
-        this.trabajadoresPK = new TrabajadoresPK(idTRABAJADORES, lOCALidLOCAL);
+    public Trabajadores(int idTRABAJADORES, int lOCALidLOCALL) {
+        this.trabajadoresPK = new TrabajadoresPK(idTRABAJADORES, lOCALidLOCALL);
     }
 
     public TrabajadoresPK getTrabajadoresPK() {
@@ -133,12 +133,12 @@ public class Trabajadores implements Serializable {
         this.juegosList = juegosList;
     }
 
-    public Locall getLocal() {
-        return local;
+    public Locall getLocall() {
+        return locall;
     }
 
-    public void setLocal(Locall local) {
-        this.local = local;
+    public void setLocall(Locall locall) {
+        this.locall = locall;
     }
 
     @Override

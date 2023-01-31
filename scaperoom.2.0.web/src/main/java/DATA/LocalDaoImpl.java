@@ -26,7 +26,7 @@ public class LocalDaoImpl implements LocalDao {
 
     @Override
     public Locall findLocalByID(Locall local) {
-        return em.find(Locall.class,local.getLocalPK().getIdLOCAL());
+        return em.find(Locall.class,local.getLocallPK().getIdLOCALL());
     }
 
     @Override

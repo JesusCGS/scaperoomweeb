@@ -23,15 +23,15 @@ public class SalaPK implements Serializable {
     private int idsala;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "LOCAL_idLOCAL")
-    private int lOCALidLOCAL;
+    @Column(name = "LOCAL_idLOCALL")
+    private int lOCALidLOCALL;
 
     public SalaPK() {
     }
 
-    public SalaPK(int idsala, int lOCALidLOCAL) {
+    public SalaPK(int idsala, int lOCALidLOCALL) {
         this.idsala = idsala;
-        this.lOCALidLOCAL = lOCALidLOCAL;
+        this.lOCALidLOCALL = lOCALidLOCALL;
     }
 
     public int getIdsala() {
@@ -42,19 +42,19 @@ public class SalaPK implements Serializable {
         this.idsala = idsala;
     }
 
-    public int getLOCALidLOCAL() {
-        return lOCALidLOCAL;
+    public int getLOCALidLOCALL() {
+        return lOCALidLOCALL;
     }
 
-    public void setLOCALidLOCAL(int lOCALidLOCAL) {
-        this.lOCALidLOCAL = lOCALidLOCAL;
+    public void setLOCALidLOCALL(int lOCALidLOCALL) {
+        this.lOCALidLOCALL = lOCALidLOCALL;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
         hash += (int) idsala;
-        hash += (int) lOCALidLOCAL;
+        hash += (int) lOCALidLOCALL;
         return hash;
     }
 
@@ -68,7 +68,7 @@ public class SalaPK implements Serializable {
         if (this.idsala != other.idsala) {
             return false;
         }
-        if (this.lOCALidLOCAL != other.lOCALidLOCAL) {
+        if (this.lOCALidLOCALL != other.lOCALidLOCALL) {
             return false;
         }
         return true;
@@ -76,7 +76,7 @@ public class SalaPK implements Serializable {
 
     @Override
     public String toString() {
-        return "DOMiNIO.SalaPK[ idsala=" + idsala + ", lOCALidLOCAL=" + lOCALidLOCAL + " ]";
+        return "DOMiNIO.SalaPK[ idsala=" + idsala + ", lOCALidLOCALL=" + lOCALidLOCALL + " ]";
     }
     
 }

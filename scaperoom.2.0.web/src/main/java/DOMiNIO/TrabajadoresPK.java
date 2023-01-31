@@ -23,15 +23,15 @@ public class TrabajadoresPK implements Serializable {
     private int idTRABAJADORES;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "LOCAL_idLOCAL")
-    private int lOCALidLOCAL;
+    @Column(name = "LOCAL_idLOCALL")
+    private int lOCALidLOCALL;
 
     public TrabajadoresPK() {
     }
 
-    public TrabajadoresPK(int idTRABAJADORES, int lOCALidLOCAL) {
+    public TrabajadoresPK(int idTRABAJADORES, int lOCALidLOCALL) {
         this.idTRABAJADORES = idTRABAJADORES;
-        this.lOCALidLOCAL = lOCALidLOCAL;
+        this.lOCALidLOCALL = lOCALidLOCALL;
     }
 
     public int getIdTRABAJADORES() {
@@ -42,19 +42,19 @@ public class TrabajadoresPK implements Serializable {
         this.idTRABAJADORES = idTRABAJADORES;
     }
 
-    public int getLOCALidLOCAL() {
-        return lOCALidLOCAL;
+    public int getLOCALidLOCALL() {
+        return lOCALidLOCALL;
     }
 
-    public void setLOCALidLOCAL(int lOCALidLOCAL) {
-        this.lOCALidLOCAL = lOCALidLOCAL;
+    public void setLOCALidLOCALL(int lOCALidLOCALL) {
+        this.lOCALidLOCALL = lOCALidLOCALL;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
         hash += (int) idTRABAJADORES;
-        hash += (int) lOCALidLOCAL;
+        hash += (int) lOCALidLOCALL;
         return hash;
     }
 
@@ -68,7 +68,7 @@ public class TrabajadoresPK implements Serializable {
         if (this.idTRABAJADORES != other.idTRABAJADORES) {
             return false;
         }
-        if (this.lOCALidLOCAL != other.lOCALidLOCAL) {
+        if (this.lOCALidLOCALL != other.lOCALidLOCALL) {
             return false;
         }
         return true;
@@ -76,7 +76,7 @@ public class TrabajadoresPK implements Serializable {
 
     @Override
     public String toString() {
-        return "DOMiNIO.TrabajadoresPK[ idTRABAJADORES=" + idTRABAJADORES + ", lOCALidLOCAL=" + lOCALidLOCAL + " ]";
+        return "DOMiNIO.TrabajadoresPK[ idTRABAJADORES=" + idTRABAJADORES + ", lOCALidLOCALL=" + lOCALidLOCALL + " ]";
     }
     
 }
