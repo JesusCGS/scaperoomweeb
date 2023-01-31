@@ -11,11 +11,9 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -24,13 +22,8 @@ import javax.validation.constraints.NotNull;
  *
  * @author Alumno Mañana
  */
-@Entity
+@MappedSuperclass
 @Table(name = "sala")
-@NamedQueries({
-    @NamedQuery(name = "Sala.findAll", query = "SELECT s FROM Sala s"),
-    @NamedQuery(name = "Sala.findByIdsala", query = "SELECT s FROM Sala s WHERE s.salaPK.idsala = :idsala"),
-    @NamedQuery(name = "Sala.findByNumSala", query = "SELECT s FROM Sala s WHERE s.numSala = :numSala"),
-    @NamedQuery(name = "Sala.findByLOCALidLOCALL", query = "SELECT s FROM Sala s WHERE s.salaPK.lOCALidLOCALL = :lOCALidLOCALL")})
 public class Sala implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -4,6 +4,10 @@ package DATA;
 
 import DOMiNIO.Usuario;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,6 +19,15 @@ import java.util.List;
  *
  * @author Alumno Mañana
  */
+@Entity
+@Table(name = "usuario")
+@NamedQueries({
+    @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u"),
+    @NamedQuery(name = "Usuario.findByIdUSUARIO", query = "SELECT u FROM Usuario u WHERE u.idUSUARIO = :idUSUARIO"),
+    @NamedQuery(name = "Usuario.findByNombre", query = "SELECT u FROM Usuario u WHERE u.nombre = :nombre"),
+    @NamedQuery(name = "Usuario.findByCorreo", query = "SELECT u FROM Usuario u WHERE u.correo = :correo"),
+    @NamedQuery(name = "Usuario.findByContrase\u00f1a", query = "SELECT u FROM Usuario u WHERE u.contrase\u00f1a = :contrase\u00f1a"),
+    @NamedQuery(name = "Usuario.findByTelefono", query = "SELECT u FROM Usuario u WHERE u.telefono = :telefono")})
 public interface UsuarioDao {
     public List<Usuario> findAllUsuario();
     

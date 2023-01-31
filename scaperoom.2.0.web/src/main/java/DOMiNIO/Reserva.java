@@ -10,11 +10,9 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -25,15 +23,8 @@ import javax.validation.constraints.Size;
  *
  * @author Alumno Mañana
  */
-@Entity
+@MappedSuperclass
 @Table(name = "reserva")
-@NamedQueries({
-    @NamedQuery(name = "Reserva.findAll", query = "SELECT r FROM Reserva r"),
-    @NamedQuery(name = "Reserva.findByIdRESERVA", query = "SELECT r FROM Reserva r WHERE r.reservaPK.idRESERVA = :idRESERVA"),
-    @NamedQuery(name = "Reserva.findByNombre", query = "SELECT r FROM Reserva r WHERE r.nombre = :nombre"),
-    @NamedQuery(name = "Reserva.findByFechaHora", query = "SELECT r FROM Reserva r WHERE r.fechaHora = :fechaHora"),
-    @NamedQuery(name = "Reserva.findByUSUARIOidUSUARIO", query = "SELECT r FROM Reserva r WHERE r.reservaPK.uSUARIOidUSUARIO = :uSUARIOidUSUARIO"),
-    @NamedQuery(name = "Reserva.findByJUEGOSidJuego", query = "SELECT r FROM Reserva r WHERE r.reservaPK.jUEGOSidJuego = :jUEGOSidJuego")})
 public class Reserva implements Serializable {
 
     private static final long serialVersionUID = 1L;

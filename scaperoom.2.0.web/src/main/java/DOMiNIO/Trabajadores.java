@@ -11,11 +11,9 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -25,16 +23,8 @@ import javax.validation.constraints.Size;
  *
  * @author Alumno Mañana
  */
-@Entity
+@MappedSuperclass
 @Table(name = "trabajadores")
-@NamedQueries({
-    @NamedQuery(name = "Trabajadores.findAll", query = "SELECT t FROM Trabajadores t"),
-    @NamedQuery(name = "Trabajadores.findByIdTRABAJADORES", query = "SELECT t FROM Trabajadores t WHERE t.trabajadoresPK.idTRABAJADORES = :idTRABAJADORES"),
-    @NamedQuery(name = "Trabajadores.findByNombre", query = "SELECT t FROM Trabajadores t WHERE t.nombre = :nombre"),
-    @NamedQuery(name = "Trabajadores.findByApellido", query = "SELECT t FROM Trabajadores t WHERE t.apellido = :apellido"),
-    @NamedQuery(name = "Trabajadores.findByDni", query = "SELECT t FROM Trabajadores t WHERE t.dni = :dni"),
-    @NamedQuery(name = "Trabajadores.findByCorreo", query = "SELECT t FROM Trabajadores t WHERE t.correo = :correo"),
-    @NamedQuery(name = "Trabajadores.findByLOCALidLOCALL", query = "SELECT t FROM Trabajadores t WHERE t.trabajadoresPK.lOCALidLOCALL = :lOCALidLOCALL")})
 public class Trabajadores implements Serializable {
 
     private static final long serialVersionUID = 1L;

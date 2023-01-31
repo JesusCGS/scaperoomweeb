@@ -10,12 +10,10 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -25,13 +23,8 @@ import javax.validation.constraints.Size;
  *
  * @author Alumno Mañana
  */
-@Entity
+@MappedSuperclass
 @Table(name = "direccion")
-@NamedQueries({
-    @NamedQuery(name = "Direccion.findAll", query = "SELECT d FROM Direccion d"),
-    @NamedQuery(name = "Direccion.findByIdDIRECCION", query = "SELECT d FROM Direccion d WHERE d.idDIRECCION = :idDIRECCION"),
-    @NamedQuery(name = "Direccion.findByCalle", query = "SELECT d FROM Direccion d WHERE d.calle = :calle"),
-    @NamedQuery(name = "Direccion.findByCiudad", query = "SELECT d FROM Direccion d WHERE d.ciudad = :ciudad")})
 public class Direccion implements Serializable {
 
     private static final long serialVersionUID = 1L;
