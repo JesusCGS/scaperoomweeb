@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>SCAPEROOM</title>
+      
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -23,6 +23,7 @@
       <!-- fevicon -->
       <link rel="icon" href="images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/tarjeta.css">
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
@@ -31,6 +32,11 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
    </head>
+   <style>
+     .fondo{background:url(images/batel.jpg)}
+     .a{border-radius: 1000px; border-color: black;}
+     
+   </style>
    <!-- body -->
    <body class="main-layout">
       <!-- loader  -->
@@ -81,7 +87,6 @@
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="Isesion.html" class="dropdown-item">Inicar Sesión</a>
                                         <a href="registrarse.html" class="dropdown-item">Crear Cuenta</a>
-                                        <a href="perfil.html" class="dropdown-item">Perfil</a>
                                     </div>
                                 </div>
                               </ul>
@@ -96,156 +101,101 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-      <!-- banner -->
-      <div id="myCarousel" class="carousel slide banner_main" data-ride="carousel">
-         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-         </ol>
-         <div class="carousel-inner">
-            <div class="carousel-item active">
-               <img class="first-slide" src="images/aa.jpg" alt="First slide">
-               <div class="container">
-                  <div class="carousel-caption relative">
-                     <h1> <span>SCAPE ROOM</span> Web Services</h1>
-                     <a href="#contact">CONTACTANOS</a>
-                  </div>
-               </div>
-            </div>
-            <div class="carousel-item">
-               <img class="second-slide" src="images/bb.jpg" alt="Second slide">
-               <div class="container">
-                  <div class="carousel-caption relative">
-                     <h1> <span style="color: orangered;">SCAPE ROOM</span> Web Services</h1>
-                     <a href="#contact">CONTACTANOS</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-         <span class="sr-only">Previous</span>
-         </a>
-         <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-         <span class="sr-only">Next</span>
-         </a>
-      </div>
-      <!-- end banner -->
-      <!-- juegos -->
+    
+      <!-- about -->
       <div id="about"  class="about">
          <div class="container">
-            <div class="row d_flex">
+            <div class="row d_flex a"style="margin-top: 20px;">
                <div class="col-md-7">
                   <div class="titlepage">
-                     <h2>Juegos</h2>
+                     <h2>AMONGUS</h2>
                      <span></span>
-                     <p>AQUI ENCONTRARAS NUESTRO CATALOGO DE JUEGOS DE SCAPEROOM . </p>
-                     <a class="read_more" href="Tjuegos.html">JUEGOS <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                     <p> Un grupo de científicos en la Antártida que encuentran una forma de vida extraterrestre congelada. Al tratar de liberarlo de su prisión para su estudio, se dan cuenta que resulta ser una forma de vida que puede tomar la forma y recuerdos de quien quiera. esta criatura es un animal sanguinario que se encuantra infiltrada por la instalacion , tu grupo y tu teneis que descubrir quien es el impostor.</p>
+                     <!--<a class="read_more" href="#">REGISTRATE  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>-->
                   </div>
                </div>
                <div class="col-md-5">
                   <div class="about_img">
-                     <figure><img src="Capturas de pantalla/PORTAL.jpg" alt="#"/></figure>
+                     <figure><img style="width: 375px;height: 275px;" src="Capturas de pantalla/Amongus.jpg" alt="#"/></figure>
                   </div>
                </div>
+               <a class="read_more " style="margin-top: 20px;left: -10px;" href="juego1.html">reservar  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-         </div>
-      </div>
-      <!-- end juegos -->
-      <!-- registro -->
-      <div id="mobile"  class="mobile">
-         <div class="container">
-            <div class="row d_flex">
-               <div class="col-md-5">
-                  <div class="mobile_img">
-                     <figure><img src="images/REGISTRO.png" alt="#"/></figure>
-                  </div>
-               </div>
+            <div class="row d_flex" style="margin-top: 20px;">
                <div class="col-md-7">
                   <div class="titlepage">
-                     <h2>REGISTRATE</h2>
+                     <h2>ATRAPAME</h2>
                      <span></span>
-                     <p>REGISTRARSE ES NECESARIO PARA PODER REALIZAR RESERVAS </p>
-                     <a class="read_more" href="#Isesion">REGISTRARSE <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                     <p> un reconocido estafador de los Estados Unidos, que en los años 60 logró hacerse pasar por piloto, abogado y médico para cobrar cheques que él mismo producía; y tu un agente del FBI junto a tu equipo ,debeis de buscar pistas en el ultimo sitio que s eencontro el estafador para saber en que lugar se encuentra para atraparlo.</p>
+                     
                   </div>
                </div>
+               <div class="col-md-5">
+                  <div class="about_img">
+                     <figure><img  style="width: 375px;height: 275px;" src="Capturas de pantalla/atrapame.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+               <a class="read_more"  style="margin-top: 20px;" href="juego2.html">reservar  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-         </div>
-      </div>
-      <!-- end registro -->
-      <!-- como se juega -->
-      <div class="clients">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6 offset-md-3">
+            <div class="row d_flex"style="margin-top: 20px;">
+               <div class="col-md-7">
                   <div class="titlepage">
-                     <h2>¿COMO JUEGO UN SCAPE ROOM?</h2>
+                     <h2>SAW</h2>
                      <span></span>
+                     <p>un grupo de amigos o desconocidos se despiertan en un lugar abandonado, una vez que despiertan hay un muñeco, este les dice que para escapar de este lugar deben superrar toda las pruebas que el mismo ha preparadao , para vivir sino moriran.</p>
+                     <!--<a class="read_more" href="#">REGISTRATE  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>-->
                   </div>
                </div>
-              
+               <div class="col-md-5">
+                  <div class="about_img">
+                     <figure><img  style="width: 375px;height: 275px;" src="Capturas de pantalla/SAW.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+               <a class="read_more"  style="margin-top: 20px;" href="juego3.html">reservar  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-            <div class="row container-fluid">
-               <div class="col-md-6 ">
+            <div class="row d_flex"style="margin-top: 20px;">
+               <div class="col-md-7">
                   <div class="titlepage">
-                     
-                     <h2>1  FORMA UN EQUIPO</h2>
-                     <P>Nuestros escapes rooms están pensados para jugar en equipo. Haz tu grupo y ponte a prueba con nosotros para vivir una experiencia divertida e inolvidable .</P>
-                  
+                     <h2>FAR CRY 3</h2>
+                     <span></span>
+                     <p>un grupo de amigos se van de vacaciones a unas islas paradisiaca , todo va bien a hasta que un grupo de piratas asalta la embarcacion en la que se encuentra este grupo, son llevados a la base de los piratas ,tendran que escapar de la base para sobrevivir </p>
+                    <!-- <a class="read_more" href="#">REGISTRATE  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>-->
                   </div>
                </div>
-               <div class="col-md-6 ">
-                  <div class="titlepage">
-                     
-                     <h2>2  HAZ TU RESERVA</h2>
-                     <P>Elige el juego que más te guste.  Puedes hacer tu reserva en la web o por teléfono. Tendrás que indicarnos el día y la hora en la que queréis jugar.</P>
+               <div class="col-md-5">
+                  <div class="about_img">
+                     <figure><img  style="width: 375px;height: 275px;" src="Capturas de pantalla/FAR CRY 3.png" alt="#"/></figure>
                   </div>
                </div>
+               <a class="read_more"  style="margin-top: 20px;" href="juego4.html">reservar  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-            <div class="row">
-               <div class="col-md-6 offset-md-3">
+            <div class="row d_flex"style="margin-top: 20px;">
+               <div class="col-md-7">
                   <div class="titlepage">
-                     
-                     <h2>3  EL JUEGO YA COMIENZA</h2>
-                     <p>En nuestro scaperoom os garantizamos una experiencia inmersiva en la cual lo mas importatnte para nosotros es la diversión 
-                        y en la que el ingenio de cada uno/a de vosotros/as hará que podáis escapar de nuestras pruebas.
-                         ¡Recordad, el trabajo en equipo es importante!
-                     </p>
+                     <h2>BACKROOM</h2>
+                     <span></span>
+                     <p>un grupo de cientificos estan trabajando en un proyecto ultrasecreto , el experimento fallo y teletransporto al equipo de cientificos a un lugar el cual nunca han estado y al parecer solo podran escapar siguiendo las indicaciones de una cinta, en la cual dice que no estan solos y se deben de dar prisa</p>
+                     <!--<a class="read_more" href="#">REGISTRATE  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>-->
                   </div>
                </div>
-            </div>
-
-         </div>
-      </div>
-      <!-- end clients -->
-
-
-
-      <!--  contactar que salgan los distintas ubicaciones de scape room y con ellas su telfono , movil direccion y el email -->
-      <div id="contact" class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>CONTACTANOS</h2>
-                     <h2 style="color: darkgoldenrod;">LOCAL MADRID CENTRO</h2>
+               <div class="col-md-5">
+                  <div class="about_img">
+                     <figure><img  style="width: 375px;height: 275px;" src="Capturas de pantalla/back.png" alt="#"/></figure>
                   </div>
- 
                </div>
-               <div class="col-md-6 container-fluid" style="display: block;">
-                  <div style="margin-top:10px ;" ><img src="images/call-icon.png"style="width: 35px;"><span style="margin-left: 20PX; color: darkgoldenrod;">+34 611476379</span></div>
-                  <div style="margin-top:10px ;" ><img src="images/mail-icon.png"style="width: 35px;"><span style="margin-left: 20PX; color: darkgoldenrod;">ABCEN@gmail.com</span></div>
-                  <div style="margin-top:10px ;" ><img src="images/map-icon.png"style="width: 25px;" ><span style="margin-left: 20PX; color: darkgoldenrod;">C/ Gran Random, 777, Madrid</span></div>
-                  <div style="margin-top:10px ;" ><img src="icon/instagram (1).png" style="width: 35px;"><span style="margin-left: 20PX; color: darkgoldenrod;">@RANDOM</span></div>  
-              </div>
+               <a class="read_more"  style="margin-top: 20px;" href="juego5.html">REGISTRATE  <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </div>
          </div>
       </div>
-      <!-- end contact -->
+      <!-- end about -->
+     
       <!--  footer -->
       <footer>
-         
+         <div class="footer">
+            <div class="container">
+               <h3 style="justify-content: center;text-align: center;">Subscribe Now</h3>
+            </div>
+         </div>
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
@@ -259,9 +209,5 @@
       <script src="js/custom.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
    </body>
-   <footer>
-
-
-   </footer>
 </html>
 
